@@ -1,4 +1,4 @@
-@extends('layouts.global')
+@extends('layouts.home')
 
 @section('content')
 <div class="intro-section" id="home-section">
