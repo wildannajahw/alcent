@@ -21,3 +21,8 @@ Route::match(["GET", "POST"], "/register", function(){
     })->name("register");
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource("users", "UserController");
+
+Route::get('/kelass/trash', 'KelasController@trash')->name('kelass.trash');
+Route::get('/kelass/{id}/restore', 'KelasController@restore')->name('kelass.restore');
+Route::delete('/kelass/{id}/delete-permanent', 'KelasController@deletePermanent')->name('kelass.delete-permanent');
+Route::resource("kelass", "KelasController");
